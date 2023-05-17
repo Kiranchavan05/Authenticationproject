@@ -23,13 +23,14 @@ const ProfileForm = () => {
       body: JSON.stringify({
         idToken:AuthCtx.token,
         password:enteredNewPassword,
-        returnSecureToken:false
+        returnSecureToken:true
 
       }),
       headers:{
         'Context-Type':'application/json'
       }
     }).then(res => {
+      console.log(res)
       history.replace('/')
 
     })
